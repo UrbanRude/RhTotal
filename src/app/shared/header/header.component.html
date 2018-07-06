@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-toolbar class="toolbar-text" >
+      <div class="toolbar-container">         
+          <h3>(Imagen) RhTotal</h3>
+          <div class="toolbar-menu-items">
+              <span *ngFor="let menu of menuToolbar" >
+                  <a routerLinkActive="active" [routerLink]="[ menu.url ]" class="toolbar-item">{{ menu.titulo }}</a> |
+              </span> 
+          </div>
+      </div>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
